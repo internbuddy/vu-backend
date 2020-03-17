@@ -1,6 +1,8 @@
 <?php
+echo "Calling API...";
 // get database connection
 include_once 'config/database.php';
+echo "Database Connection Initiated..";
  
 // instantiate user object
 include_once 'objects/schedule.php';
