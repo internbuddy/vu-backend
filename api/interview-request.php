@@ -1,10 +1,9 @@
 <?php
- 
 // get database connection
-include_once 'database.php';
+include_once 'config/database.php';
  
 // instantiate user object
-include_once 'schedule.php';
+include_once 'objects/schedule.php';
 header('Content-Type: application/json');
 header('Access-Control-Request-Method: POST');
 error_reporting(0);
