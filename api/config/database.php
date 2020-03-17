@@ -1,6 +1,6 @@
 <?php
 class Database{
- 
+ echo "Calling Database....";
     //  database credentials
     //private $host = "localhost";
     //private $db_name = "virtual-university";
