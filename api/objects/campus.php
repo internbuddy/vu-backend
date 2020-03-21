@@ -19,7 +19,7 @@ class Campus{
         $this->conn = $db;
     }
     // signup user
-    function get_campus_details(){
+    function getCampusDetails(){
     
         
         // query to insert record
