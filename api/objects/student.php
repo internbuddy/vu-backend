@@ -8,11 +8,14 @@ class Student{
     // object properties
     public $id;
     public $name;
-    public $description;
-    public $price;
-    public $category_id;
-    public $category_name;
-    public $created;
+    public $email;
+    public $f_m_name;
+    public $dob;
+    public $mobile;
+    public $ug_qual;
+    public $cgpa;
+    public $reg_date_time;
+    public $status;
   
     // constructor with $db as database connection
     public function __construct($db){
@@ -20,7 +23,7 @@ class Student{
     }
   
 // read products
-function read(){
+function getDetails(){
   
     // select all query
     $query = "SELECT
