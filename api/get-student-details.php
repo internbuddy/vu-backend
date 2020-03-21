@@ -6,13 +6,10 @@
 //header("Access-Control-Max-Age: 3600");
 //header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-echo "Header Set. \n";
 // database connection will be here
 // include database and object files
-include_once './config/database.php';
-include_once './objects/student.php';
-
-echo "Database included.\n";
+include_once 'config/database.php';
+include_once 'objects/student.php';
 
 // instantiate database and product object
 $database = new Database();
@@ -48,6 +45,8 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
    );
 array_push($students_arr["records"], $student_record);
 }
+// set response code - 200 OK
+http_response_code(200);
 // show products data in json format
 echo json_encode($students_arr);
 ?>
