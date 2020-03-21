@@ -6,12 +6,14 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-  
+echo "Header Set. \n";
 // database connection will be here
 // include database and object files
 include_once './config/database.php';
 include_once './objects/student.php';
-  
+
+echo "Database included.\n";
+
 // instantiate database and product object
 $database = new Database();
 $db = $database->getConnection();
