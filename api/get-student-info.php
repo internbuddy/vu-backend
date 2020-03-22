@@ -1,6 +1,6 @@
 <?php
 include("config/connection.php");
-$result=mysqli_query($conn,"select * from vu_student__master where where status=1");
+$result=mysqli_query($conn,"select * from vu_student_master where where is_active=1");
 $data = array();
 $count=mysqli_num_rows($result);
 if($count==0)
@@ -25,8 +25,8 @@ else
 	  		$ug_qual = $row['ug_qual'];
 	  		$cgpa = $row['ug_qual'];
 	  		$reg_date_time = $row['reg_date_time'];
-	  		$status = $row['status'];
+	  		$is_active = $row['is_active'];
 	}  
 }
-$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data,"id"=>$id,"name"=>$name,"email"=>$email,"f_m_name"=>$f_m_name,"dob"=>$dob, "mobile"=>$mobile, "ug_qual"=>$ug_qual,"cgpa"=>$cgpa, "reg_date_time"=>$reg_date_time, "status"=>$status);
+$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data,"id"=>$id,"name"=>$name,"email"=>$email,"f_m_name"=>$f_m_name,"dob"=>$dob, "mobile"=>$mobile, "ug_qual"=>$ug_qual,"cgpa"=>$cgpa, "reg_date_time"=>$reg_date_time, "is_active"=>$is_active);
 echo json_encode($dictionary);	  		
