@@ -17,31 +17,21 @@ class Campus{
     // constructor with $db as database connection
     public function __construct($db){
         $this->conn = $db;
-    }
-    // signup user
-    function getCampusDetails(){
-    
-        
-        // query to insert record
-        $query = "SELECT * FROM 
-                    " . $this->table_name . ";
-    
+    }  
+    function campus_details(){   
+              
+        // query to fetch records
+        $query = "SELECT * FROM
+                    " . $this->table_name ;    
         // prepare query
         $stmt = $this->conn->prepare($query);
-    
-   
-      
-    
-        // execute query
-         if($stmt->execute()){      
-            return $stmt;      
-      
+
+         if($stmt->execute()){
+           
+        return $stmt;
     }
     
     return false;
      
-    }
-
-    // login user
-    
+    }   
     }
