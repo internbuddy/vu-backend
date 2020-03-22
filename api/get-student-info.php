@@ -1,6 +1,6 @@
 <?php
 include("config/connection.php");
-$result=mysqli_query($conn,"select * from vu_student_master where is_active=1");
+$result=mysqli_query($conn,"select * from vu_student_master where is_active='1'");
 $data = array();
 $count=mysqli_num_rows($result);
 if($count==0)
