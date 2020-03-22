@@ -20,11 +20,13 @@ else
 			$name = $row['name'];
 			$email = $row['email'];
 			$f_m_name = $row['f_m_name'];
-      $dob = $row2['dob'];
+			$dob = $row['dob'];
+	  		$mobile = $row['mobile'];
+	  		$ug_qual = $row['ug_qual'];
+	  		$cgpa = $row['ug_qual'];
+	  		$reg_date_time = $row['reg_date_time'];
+	  		$status = $row['status'];
 	}  
 }
-}
-
-`vu_student_master` (`id`, `name`, `email`, `f_m_name`, `dob`, `mobile`, `ug_qual`, `cgpa`, `reg_date_time`, `status`)
-$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data,"patient_name"=>$patient_name,"patient_age"=>$patient_age,"patient_gender"=>$patient_gender,"person_id"=>$person_id);
+$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data,"id"=>$id,"name"=>$name,"email"=>$email,"f_m_name"=>$f_m_name,"dob"=>$dob, "mobile"=>$mobile, "ug_qual"=>$ug_qual,"cgpa"=>$cgpa, "reg_date_time"=>$reg_date_time, "status"=>$status);
 echo json_encode($dictionary);	  		
