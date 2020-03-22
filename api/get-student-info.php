@@ -35,5 +35,5 @@ else
 	  		$is_active = $row['is_active'];
 	}  
 }
-$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data,"id"=>$id,"name"=>$name,"email"=>$email,"f_m_name"=>$f_m_name,"dob"=>$dob, "mobile"=>$mobile, "ug_qual"=>$ug_qual,"cgpa"=>$cgpa, "reg_date_time"=>$reg_date_time, "is_active"=>$is_active);
+$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data);
 echo json_encode($dictionary);	  		
