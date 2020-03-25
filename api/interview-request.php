@@ -1,7 +1,7 @@
 <?php
 echo "Calling API...";
 // get database connection
-include_once 'config/database.php';
+include_once 'config/connection.php';
 echo "Database Connection Initiated..";
  
 // instantiate user object
