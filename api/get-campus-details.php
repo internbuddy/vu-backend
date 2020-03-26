@@ -30,4 +30,4 @@ if($count>0){
 	
 	$dictionary = array("status"=>$status,"msg"=>$msg,"data"=>$data);
 }
-return json_encode($dictionary);	  
+echo json_encode($dictionary);	  
